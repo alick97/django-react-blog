@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:18.04
 # Set the file maintainer (your name - the file's author)
 MAINTAINER Ray Alez
 
@@ -7,10 +7,10 @@ ENV PROJECTDIR=/home/blog
 ENV BACKENDDIR=/home/blog/backend
 
 # Install basic apps
-RUN apt-get update && apt-get install -y git emacs curl iputils-ping
+RUN apt-get update && apt-get install -y git vim curl iputils-ping
 
 # Install python/django dependencies 	        	    
-RUN apt-get install -y python3-dev python3-pip build-essential supervisor nginx libpq-dev uwsgi-plugin-python3 libcurl4-openssl-dev supervisor
+RUN apt-get install -y libssl-dev python3-dev python3-pip build-essential supervisor nginx libpq-dev uwsgi-plugin-python3 libcurl4-openssl-dev supervisor
 RUN pip3 install -U pip setuptools
 RUN pip3 install uwsgi
 

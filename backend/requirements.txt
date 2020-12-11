@@ -1,6 +1,7 @@
-Django==1.10
+Django==1.11
 djangorestframework
-psycopg2
+pytz
+psycopg2-binary
 django-cors-headers
 
 markdown
